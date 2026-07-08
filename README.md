@@ -28,7 +28,10 @@ Cela nous a permis d’exécuter l’outil directement depuis Kali, comme le fer
 
 5. Réalisation des tests d’audit
 Une fois l’outil exécuté depuis Kali, plusieurs tests ont été réalisés sur la VM Ubuntu Azure :
-Scan de ports
+Scan de ports :
+
+python3 cli.py --target 40.66.52.60 --ports 1-100 --urls http://40.66.52.60 --tls 40.66.52.60 --report
+
 Le module de scan a permis d’identifier les ports ouverts sur la machine cible. Les résultats ont confirmé la présence des ports 22, 80 et 443 en écoute.
 Analyse des en têtes HTTP
 Le module HTTP a interrogé le serveur Apache pour récupérer les en têtes renvoyés. Cette analyse permet d’évaluer le niveau de sécurité du serveur web (présence ou absence de headers critiques).
